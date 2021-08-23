@@ -1,0 +1,12 @@
+article{
+    width: 100%;
+    min-height: 100%;
+    margin-right: 50px;
+    margin-top: 25px;
+    padding: 3px;
+    border: #EDE2C1 4px dashed;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    float: left;
+    text-align: center;
+    shape-margin: center;
