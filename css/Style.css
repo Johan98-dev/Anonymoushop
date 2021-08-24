@@ -1,4 +1,4 @@
-article{
+article {
     width: 100%;
     min-height: 100%;
     margin-right: 50px;
@@ -10,3 +10,4 @@ article{
     float: left;
     text-align: center;
     shape-margin: center;
+}

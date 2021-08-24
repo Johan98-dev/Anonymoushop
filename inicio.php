@@ -27,8 +27,8 @@
 					</li>
 				</ul>
 				<span class="navbar-text">
-					<a class="nav-link" href="#">Log in</a>
-					<a class="nav-link" href="#">Registro</a>
+					<a class="nav-link" href="login.php">Login</a>
+					<a class="nav-link" href="registrar.php">Registro</a>
 				</span>
 			</div>
 		</div>
