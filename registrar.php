@@ -30,23 +30,28 @@
 				</div>
 
 				<div class="form-group">
+					<label for="id_pers"># Identificación </label>
+					<input type="text" name="id_pers" class="form-control" id="id_pers">
+				</div>
+
+				<div class="form-group">
 					<label for="email">Email </label>
 					<input type="text" name="email" class="form-control" id="email">
 				</div>
 				<div class="form-group">
-					<label for="nombre">Tel </label>
-					<input type="text" name="tel" class="form-control" id="nombre" >
+					<label for="tel">Tel </label>
+					<input type="text" name="tel" class="form-control" id="tel" >
 				</div>
                 <div class="form-group">
-					<label for="nombre">dirección </label>
+					<label for="direccion">Dirección </label>
 					<input type="text" name="direccion" class="form-control" id="direccion" >
 				</div>
                 <div class="form-group">
-					<label for="codigo">User </label>
-					<input type="text" name="nom_us" class="form-control" id="nom_us" >
+					<label for="nomb_us">User </label>
+					<input type="text" name="nomb_us" class="form-control" id="nomb_us" >
 				</div>
                 <div class="form-group">
-					<label for="contraseña">Password </label>
+					<label for="contra_us">Password </label>
 					<input type="text" name="contra_us" class="form-control" id="contra_us" >
 				</div>
 
@@ -57,41 +62,51 @@
 		 	 </form>
 			
 		    <?php
-                $codigo = "";
-				$nombre = "";
-				$apellido = "";
-				$email = "";
+                $id_pers = "";
+				$nomb_pers = "";
+				$apel_pers = "";
+				$dir_pers = "";
+				$tel_pers = "";
+				$correo = "";
+				$nomb_us = ""; 
+				$contra_us = "";
+				$tipo = "C";
 				if(isset($_POST['btn_añadir'])){
-					$codigo = $_POST['codigo'];
-					$nombre = $_POST['nombre'];
-					$apellido = $_POST['apellido'];
-					$email = $_POST['email'];
-					if($nombre=="" || $apellido=="" || $email=="" || $codigo==""){
-						echo "Los campos son obligatorios por favor";
+					$id_pers = $_POST['id_pers'];
+				    $nomb_pers = $_POST['nombre'];
+				    $apel_pers = $_POST['apellido'];
+			    	$dir_pers = $_POST['direccion'];
+				    $tel_pers = $_POST['tel'];
+				    $correo = $_POST['email'];
+				    $nomb_us = $_POST['nomb_us']; 
+				    $contra_us = $_POST['contra_us'];
+					if($id_pers == "" || $nomb_pers == "" || $apel_pers == "" || $dir_pers == "" ||	$tel_pers == "" || $correo == "" || $nomb_us == "" || $contra_us == ""){
+						echo "Todos los campos son obligatorios*";
 					}else{
 						$existe = 0;
-						$resultados = pg_query($con,"SELECT * FROM prueba1 WHERE codigo = '$codigo'");
+						$resultados = pg_query($con,"SELECT * FROM usuarios u join personas p on p.nomb_us=u.nomb_us WHERE id_pers = '$id_pers'");
 						while($mostrar = pg_fetch_array($resultados)){
 							$existe++;
 						}
 						if($existe==0){ 
-                            $resultados = pg_query($con,"SELECT * FROM prueba1 WHERE email = '$email'");
+                            $resultados = pg_query($con,"SELECT * FROM usuarios u join personas p on p.nomb_us=u.nomb_us WHERE correo = '$correo'");
                             while($mostrar = pg_fetch_array($resultados)){
                                 $existe++;
                             }
                             if($existe==0){
-								if(strlen($codigo)>10){
-									echo "El codigo es demasiado largo, por favor digitelo nuevamente"."<br>";
+								if(strlen($id_pers)>10){
+									echo "El ID es demasiado largo, por favor digitelo nuevamente"."<br>";
 									echo "Recuerde no debe ser mayor a 10 digitos";
 								}else{
-									pg_query($con, "INSERT INTO prueba1 (codigo,nombre,apelido,email) values ('$codigo','$nombre','$apellido', '$email')");
+									pg_query($con, "INSERT INTO usuarios (nomb_us, contra_us, tipo) values ('$nomb_us','$contra_us','$tipo')");
+									pg_query($con, "INSERT INTO personas (id_pers, nomb_pers, apel_pers, dir_pers, tel_pers, correo, nomb_us) values ('$id_pers','$nomb_pers','$apel_pers', '$dir_pers', '$tel_pers', '$correo', '$nomb_us')");
 									echo "Registro Exitoso";
 								}
                             }else{
-                                echo "Este email ya esta registrada";
+                                echo "Este email ya está registrada";
                             }
 						}else{
-							echo "Este codigo ya esta registrado";
+							echo "Este #Id ya está registrado";
 						}
 
 					}

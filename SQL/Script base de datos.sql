@@ -48,7 +48,7 @@ create table ciudades (
 );
 
 create table personas (
-    cod_pers varchar(3) not null primary key,
+    id_pers varchar(3) not null primary key,
     nomb_pers varchar(50),
     apel_pers varchar(50),
     dir_pers varchar(50),
@@ -64,9 +64,9 @@ create table factura (
     cod_fac varchar(3) not null primary key,
     fecha date,
     total float,
-    cod_pers varchar(3),
+    id_pers varchar(3),
     cod_pago varchar(3),
-    constraint fk_cod_pers foreign key (cod_pers) references personas(cod_pers),
+    constraint fk_id_pers foreign key (ci_pers) references personas(id_pers),
     constraint fk_cod_pago foreign key (cod_pago) references pago(cod_pago)
 );
 
@@ -92,5 +92,5 @@ insert into ciudades("cod_ciu", "nomb_ciu") values ('1', 'villavicencio');
 insert into usuarios("nomb_us", "contra_us", "tipo") values ('Johan98', 'root', 'A');
 insert into usuarios("nomb_us", "contra_us", "tipo") values ('Alex98', '123', 'A');
 
-insert into personas("cod_pers", "nomb_pers", "apel_pers", "dir_pers", "tel_pers", "correo", "cod_ciu", "nomb_us") values ('1','Johan', 'Albarracin', 'cll 6 #11 Br Estero', '3123456789', 'johan@example.com', '1', 'Johan98');
-insert into personas("cod_pers", "nomb_pers", "apel_pers", "dir_pers", "tel_pers", "correo", "cod_ciu", "nomb_us") values ('2','Alex', 'Barreto', 'Apt 12-04 Torres de San Juan', '3222222234', 'alex@example.com', '1', 'Alex98');
+insert into personas("id_pers", "nomb_pers", "apel_pers", "dir_pers", "tel_pers", "correo", "cod_ciu", "nomb_us") values ('1111','Johan', 'Albarracin', 'cll 6 #11 Br Estero', '3123456789', 'johan@example.com', '1', 'Johan98');
+insert into personas("id_pers", "nomb_pers", "apel_pers", "dir_pers", "tel_pers", "correo", "cod_ciu", "nomb_us") values ('2222','Alex', 'Barreto', 'Apt 12-04 Torres de San Juan', '3222222234', 'alex@example.com', '1', 'Alex98');
