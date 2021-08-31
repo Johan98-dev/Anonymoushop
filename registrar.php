@@ -52,7 +52,7 @@
 				</div>
                 <div class="form-group">
 					<label for="contra_us">Password </label>
-					<input type="text" name="contra_us" class="form-control" id="contra_us" >
+					<input type="password" name="contra_us" class="form-control" id="contra_us" >
 				</div>
 
 				<center>
@@ -89,7 +89,7 @@
 							$existe++;
 						}
 						if($existe==0){ 
-                            $resultados = pg_query($con,"SELECT * FROM usuarios u join personas p on p.nomb_us=u.nomb_us WHERE correo = '$correo'");
+                            $resultados = pg_query($con,"SELECT * FROM usuarios u join personas p on p.nomb_us=u.nomb_us WHERE nomb_us = '$nomb_us'");
                             while($mostrar = pg_fetch_array($resultados)){
                                 $existe++;
                             }
@@ -103,7 +103,7 @@
 									echo "Registro Exitoso";
 								}
                             }else{
-                                echo "Este email ya está registrada";
+                                echo "Este Usuario ya está registrado";
                             }
 						}else{
 							echo "Este #Id ya está registrado";
