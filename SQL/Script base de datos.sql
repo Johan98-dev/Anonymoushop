@@ -88,9 +88,15 @@ create table envio (
 );
 
 insert into ciudades("cod_ciu", "nomb_ciu") values ('1', 'villavicencio');
+insert into ciudades("cod_ciu", "nomb_ciu") values ('2', 'bogotá');
+insert into ciudades("cod_ciu", "nomb_ciu") values ('3', 'medellín');
 
 insert into usuarios("nomb_us", "contra_us", "tipo") values ('Johan98', 'root', 'A');
 insert into usuarios("nomb_us", "contra_us", "tipo") values ('Alex98', '123', 'A');
 
 insert into personas("id_pers", "nomb_pers", "apel_pers", "dir_pers", "tel_pers", "correo", "cod_ciu", "nomb_us") values ('1111','Johan', 'Albarracin', 'cll 6 #11 Br Estero', '3123456789', 'johan@example.com', '1', 'Johan98');
 insert into personas("id_pers", "nomb_pers", "apel_pers", "dir_pers", "tel_pers", "correo", "cod_ciu", "nomb_us") values ('2222','Alex', 'Barreto', 'Apt 12-04 Torres de San Juan', '3222222234', 'alex@example.com', '1', 'Alex98');
+
+insert into categorias("cod_cat", "nomb_cat") values ('Dep', 'Deportes');
+insert into categorias("cod_cat", "nomb_cat") values ('Tec', 'Tecnología');
+insert into categorias("cod_cat", "nomb_cat") values ('Rop', 'Ropa');
