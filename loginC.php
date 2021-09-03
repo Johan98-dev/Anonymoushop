@@ -38,6 +38,7 @@
                 $nomb_us = ""; 
 				$contra_us = "";
 				if(isset($_POST['btn_login'])){
+					session_start();
 				    $nomb_us = $_POST['nomb_us']; 
 				    $contra_us = $_POST['contra_us'];
 					if($nomb_us == "" || $contra_us == ""){
