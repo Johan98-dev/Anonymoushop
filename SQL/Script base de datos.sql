@@ -100,3 +100,15 @@ insert into personas("id_pers", "nomb_pers", "apel_pers", "dir_pers", "tel_pers"
 insert into categorias("cod_cat", "nomb_cat") values ('Dep', 'Deportes');
 insert into categorias("cod_cat", "nomb_cat") values ('Tec', 'Tecnología');
 insert into categorias("cod_cat", "nomb_cat") values ('Rop', 'Ropa');
+
+insert into proveedores("cod_prov", "nomb_prov", "tel_prov", "dir_prov") values ('CD', 'Casa del deporte', '6644', 'Carrera 16 #80-32');
+insert into proveedores("cod_prov", "nomb_prov", "tel_prov", "dir_prov") values ('Nex', 'Nexsys', '3322', 'Carrera 1 #10-12');
+insert into proveedores("cod_prov", "nomb_prov", "tel_prov", "dir_prov") values ('Cfx', 'Confetex', '65555', 'Av 40 Carrera 22 #2');
+
+insert into articulos("cod_art", "nomb_art", "precio", "stock", "cod_cat", "cod_prov") values ('RT', 'Raqueta de tennis', 80000, 50, 'Dep', 'CD');
+insert into articulos("cod_art", "nomb_art", "precio", "stock", "cod_cat", "cod_prov") values ('BF', 'Balón de fútbol', 120000, 80, 'Dep', 'CD');
+insert into articulos("cod_art", "nomb_art", "precio", "stock", "cod_cat", "cod_prov") values ('PG', 'Palo de golf', 190000, 40, 'Dep', 'CD');
+insert into articulos("cod_art", "nomb_art", "precio", "stock", "cod_cat", "cod_prov") values ('AW', 'Apple Watch', 520000, 100, 'Tec', 'Nex');
+insert into articulos("cod_art", "nomb_art", "precio", "stock", "cod_cat", "cod_prov") values ('XO', 'Xbox One', 1500000, 30, 'Tec', 'Nex');
+insert into articulos("cod_art", "nomb_art", "precio", "stock", "cod_cat", "cod_prov") values ('CCV', 'Camiseta cuello V', 30000, 50, 'Rop', 'Cfx');
+
