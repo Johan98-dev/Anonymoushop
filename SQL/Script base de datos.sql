@@ -111,4 +111,26 @@ insert into articulos("cod_art", "nomb_art", "precio", "stock", "cod_cat", "cod_
 insert into articulos("cod_art", "nomb_art", "precio", "stock", "cod_cat", "cod_prov") values ('AW', 'Apple Watch', 520000, 100, 'Tec', 'Nex');
 insert into articulos("cod_art", "nomb_art", "precio", "stock", "cod_cat", "cod_prov") values ('XO', 'Xbox One', 1500000, 30, 'Tec', 'Nex');
 insert into articulos("cod_art", "nomb_art", "precio", "stock", "cod_cat", "cod_prov") values ('CCV', 'Camiseta cuello V', 30000, 50, 'Rop', 'Cfx');
+insert into articulos("cod_art", "nomb_art", "precio", "stock", "cod_cat", "cod_prov") values ('PXR', 'iPhone XR 64Gb', 1960000, 40, 'Tec', 'Nex');
 
+/*Disparadores*/
+CREATE TABLE bitacora(
+cod_bit serial,
+nomb_d varchar(25),
+tabla  varchar(25),
+Accion varchar(30),
+fecha timestamp,
+PRIMARY KEY(cod_bit)
+);
+
+CREATE OR REPLACE FUNCTION Articulos_trigger() RETURNS TRIGGER AS $$
+ DECLARE
+ BEGIN
+ INSERT INTO bitacora (nomb_d,tabla,Accion,fecha) VALUES (TG_NAME,TG_TABLE_NAME,TG_OP,current_date); /* current_timestamp*/
+ RETURN NEW;
+ END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER articulos_Disp BEFORE INSERT OR UPDATE OR DELETE
+ ON articulos FOR EACH ROW
+ EXECUTE PROCEDURE Articulos_trigger();
