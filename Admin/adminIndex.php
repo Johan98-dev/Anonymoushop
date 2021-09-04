@@ -1,6 +1,6 @@
 <?php 
 include("./../conexion.php");
 $con = conectar();
-
-echo "Hola Admin!!" ;
+session_start();
+echo "Hola Admin!!".  $_SESSION["nomb_us"];
 ?>

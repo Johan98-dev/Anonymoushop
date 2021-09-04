@@ -57,7 +57,8 @@
                                 echo "ERROR: Usuario y/o Contraseña incorrectos";
                             }
                         }    
-                    }    
+                    }
+					$_SESSION["nomb_us"]=$nomb_us;    
                 }		
 			?>
 			<center>
