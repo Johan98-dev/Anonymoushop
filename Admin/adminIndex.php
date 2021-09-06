@@ -25,10 +25,10 @@ echo "Hola Admin!!".  $_SESSION["nomb_us"];
 					<div id="menu">
 							<ul>
 								<li>Estadisticas</li>
-								<li>Administradores</li>
-								<li>Productos</li>
-								<li>Proveedor</li>
-								<li>Salir</li>
+								<li><a href="veradmins.php">Admins</a></li>
+								<li><a href="verproduc.php">Productos</a></li>
+								<li><a href="verprov.php">Proveedores</a></li>
+								<li><a href="logout.php">Log out</a></li>
 							</ul>
 					</div>
 				</div>
@@ -37,7 +37,9 @@ echo "Hola Admin!!".  $_SESSION["nomb_us"];
                     <div class="jumbotron">
 					<center>
                         <h1>Bienvenidos a AnonymouShop</h1>
-                        <p>Las mejor la calidad la encuentras aqui</p>
+                        <?php
+                       echo "Hola Admin ".  $_SESSION["nomb_us"]; 
+                       ?>
 					</center>
                     </div>
 			</div>
