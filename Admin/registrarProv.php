@@ -17,7 +17,7 @@
 
     		<center><h1>Registrar Proveedor</h1></center>
 
-    		<form method="POST" action="registrarAdmin.php" >
+    		<form method="POST" action="registrarProv.php" >
 
 				<div class="form-group">
 					<label for="cod_prov">Cod </label>
@@ -62,7 +62,7 @@
 							$existe++;
 						}
 						if($existe==0){ 
-                            $resultados = pg_query($con,"SELECT * FROM provedores WHERE nomb_prov = '$nomb_prov'");
+                            $resultados = pg_query($con,"SELECT * FROM proveedores WHERE nomb_prov = '$nomb_prov'");
                             while($mostrar = pg_fetch_array($resultados)){
                                 $existe++;
                             }

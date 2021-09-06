@@ -43,7 +43,7 @@
 		<center>
 			<a href="adminIndex.php"><input type="submit" value="Volver" class="btn btn-primary"></a>
 			<a href="registrarProv.php"><input type="submit" value="Agregar Productos" class="btn btn-primary"></a>
-			<a href="elimprodc.php"><input type="submit" value="Eliminar Producto" class="btn btn-primary"></a>
+			<a href="actualizarArt.php"><input type="submit" value="Actualizar el precio" class="btn btn-primary"></a>
 		</center>
 		</body>
 	</html>
