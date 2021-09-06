@@ -20,7 +20,7 @@
 	
 	<?php 
 	
-	$carrito_mio=$_SESSION['carrito'];
+	$carrito_mio=$_SESSION['nomb_us'];
 	$_SESSION['carrito']=$carrito_mio;
 	
 	// contamos nuestro carrito
