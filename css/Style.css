@@ -1,3 +1,9 @@
+body {
+    background-size: 100%;
+    color: white;
+    font-family: 'calibri';
+}
+
 article {
     width: 100%;
     min-height: 100%;
@@ -10,4 +16,83 @@ article {
     float: left;
     text-align: center;
     shape-margin: center;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    letter-spacing: 4px;
+    font-size: 24px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    left: 330%;
+}
+
+.nav-link:hover {
+    background: #e99313;
+    box-shadow: 0 0 10px #e99313, 0 0 40px #e99313, 0 0 80px #e99313;
+    transition-delay: 1s;
+}
+
+.nav-link span {
+    position: absolute;
+    display: block;
+    color: #fff;
+}
+
+#span1 {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #e99313);
+}
+
+.nav-link:hover #span1 {
+    left: 100%;
+    transition: 1s;
+}
+
+#span3 {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #e99313);
+}
+
+.nav-link:hover #span3 {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+#span2 {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #e99313);
+}
+
+.nav-link:hover #span2 {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.container-fluid {
+    background: rgb(0, 0, 0);
+}
+
+.bien {
+    font-family: 'calibri';
+    color: rgb(0, 0, 0);
+    font-size: 4em;
+    text-transform: initial;
+    position: relative;
+    left: 25%;
 }
