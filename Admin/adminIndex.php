@@ -24,7 +24,7 @@ echo "Hola Admin!!".  $_SESSION["nomb_us"];
 				<div class='col-md-2 '>
 					<div id="menu">
 							<ul>
-								<li>Estadisticas</li>
+							    <li><a href="bitacora.php" style="color:#FFFF;" >Bitácora</a></li>
 								<li><a href="veradmins.php" style="color:#FFFF;" >Admins</a></li>
 								<li><a href="verproduc.php" style="color:#FFFF;">Productos</a></li>
 								<li><a href="verprov.php" style="color:#FFFF;">Proveedores</a></li>

@@ -126,7 +126,7 @@ PRIMARY KEY(cod_bit)
 CREATE OR REPLACE FUNCTION Articulos_trigger() RETURNS TRIGGER AS $$
  DECLARE
  BEGIN
- INSERT INTO bitacora (nomb_d,tabla,Accion,fecha) VALUES (TG_NAME,TG_TABLE_NAME,TG_OP,current_date); /* current_timestamp*/
+ INSERT INTO bitacora (nomb_d,tabla,Accion,fecha) VALUES (TG_NAME,TG_TABLE_NAME,TG_OP,current_timestamp); /* current_timestamp*/
  RETURN NEW;
  END;
 $$ LANGUAGE plpgsql;

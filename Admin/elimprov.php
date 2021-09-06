@@ -20,7 +20,7 @@
 
     		<center><h1>Eliminar</h1></center>
 
-    		<form method="POST" action="elimprodc.php" >
+    		<form method="POST" action="elimprov.php" >
 
 				<div class="form-group">
 					<label for="cod_prov">Codigo </label>
@@ -36,8 +36,8 @@
 		    <?php
                 $cod_prov="";
 				if(isset($_POST['btn_eliminar'])){
-					$cod_art = $_POST['cod_prov'];
-					if($cod_art==""){
+					$cod_prov = $_POST['cod_prov'];
+					if($cod_prov==""){
 						echo "El campo es obligatorio";
 					}else{
 						$existe = 0;
@@ -48,7 +48,7 @@
 						if($existe==0){
 							echo "No existe este registro";
 						}else{
-							$_DELETE_SQL =  "DELETE FROM articulos WHERE cod_prov = '$cod_prov'";
+							$_DELETE_SQL =  "DELETE FROM proveedores WHERE cod_prov = '$cod_prov'";
                             pg_query($con,$_DELETE_SQL);
                             echo "El registro ha sido eliminado"; 
 						}
