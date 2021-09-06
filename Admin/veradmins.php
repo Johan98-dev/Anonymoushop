@@ -46,6 +46,7 @@
 		</div>
 		<center>
 			<a href="adminIndex.php"><input type="submit" value="Volver" class="btn btn-primary"></a>
+			<a href="registrarAdmin.php"><input type="submit" value="Registrar Admin" class="btn btn-primary"></a>
 			<a href="elimadmin.php"><input type="submit" value="Eliminar Administrador" class="btn btn-primary"></a>
 		</center>
 		</body>

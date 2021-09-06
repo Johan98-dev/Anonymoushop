@@ -25,10 +25,10 @@ echo "Hola Admin!!".  $_SESSION["nomb_us"];
 					<div id="menu">
 							<ul>
 								<li>Estadisticas</li>
-								<li><a href="veradmins.php">Admins</a></li>
-								<li><a href="verproduc.php">Productos</a></li>
-								<li><a href="verprov.php">Proveedores</a></li>
-								<li><a href="logout.php">Log out</a></li>
+								<li><a href="veradmins.php" style="color:#FFFF;" >Admins</a></li>
+								<li><a href="verproduc.php" style="color:#FFFF;">Productos</a></li>
+								<li><a href="verprov.php" style="color:#FFFF;">Proveedores</a></li>
+								<li><a href="logout.php" style="color:#FFFF;">Log out</a></li>
 							</ul>
 					</div>
 				</div>

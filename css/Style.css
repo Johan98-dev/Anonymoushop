@@ -28,7 +28,7 @@ article {
     text-decoration: none;
     overflow: hidden;
     transition: 0.2s;
-    left: 330%;
+    left: 10%;
 }
 
 .nav-link:hover {

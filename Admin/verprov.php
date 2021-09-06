@@ -42,6 +42,7 @@
 		</div>
 		<center>
 			<a href="adminIndex.php"><input type="submit" value="Volver" class="btn btn-primary"></a>
+			<a href="registrarProv.php"><input type="submit" value="Registrar Proveedor" class="btn btn-primary"></a>
 			<a href="elimprov.php"><input type="submit" value="Eliminar Proveedor" class="btn btn-primary"></a>
 		</center>
 		</body>
