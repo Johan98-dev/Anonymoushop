@@ -51,7 +51,7 @@
                                     header("Location: Admin/adminIndex.php");
                                 }
                                 if($datos['tipo']=='C'){
-                                    header("Location: Cliente/clientIndex.php");
+                                    header("Location: Cliente/index.php");
                                 }
                             }else{
                                 echo "ERROR: Usuario y/o Contraseña incorrectos";
