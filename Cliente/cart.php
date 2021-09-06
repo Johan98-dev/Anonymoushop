@@ -1,4 +1,7 @@
-<?php session_start(); 
+<?php 
+include("./../conexion.php");
+$con = conectar();
+session_start(); 
 //aqui empieza el carrito
 
 	if(isset($_SESSION['carrito'])){

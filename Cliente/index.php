@@ -1,4 +1,7 @@
-<?php session_start();?>
+<?php 
+include("./../conexion.php");
+$con = conectar();
+session_start();?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,8 +23,11 @@
 
 <?php 
 
-$carrito_mio=$_SESSION['carrito'];
+$carrito_mio=$_SESSION['nomb_us'];
 $_SESSION['carrito']=$carrito_mio;
+
+$carrito = pg_query($con,"SELECT precio FROM articulos WHERE cod_art = '$cod_art'"); 
+
 
 // contamos nuestro carrito
 if(isset($_SESSION['carrito'])){
