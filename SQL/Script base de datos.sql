@@ -134,3 +134,15 @@ $$ LANGUAGE plpgsql;
 CREATE TRIGGER articulos_Disp BEFORE INSERT OR UPDATE OR DELETE
  ON articulos FOR EACH ROW
  EXECUTE PROCEDURE Articulos_trigger();
+
+ CREATE OR REPLACE FUNCTION Proveedores_trigger() RETURNS TRIGGER AS $$
+ DECLARE
+ BEGIN
+ INSERT INTO bitacora (nomb_d,tabla,Accion,fecha) VALUES (TG_NAME,TG_TABLE_NAME,TG_OP,current_timestamp); /* current_timestamp*/
+ RETURN NEW;
+ END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER proveedores_Disp BEFORE INSERT OR UPDATE OR DELETE
+ ON proveedores FOR EACH ROW
+ EXECUTE PROCEDURE Proveedores_trigger();

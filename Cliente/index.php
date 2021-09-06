@@ -132,7 +132,7 @@
 			<input name="precio" type="hidden" id="precio" value="10" />
 			<input name="titulo" type="hidden" id="titulo" value="articulo 1" />
 			<input name="cantidad" type="hidden" id="cantidad" value="1" class="pl-2" />
-			<img src="img/art.jpg" class="card-img-top" alt="...">
+			<img src="img/xbox.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
 							<h5 class="card-title">Producto 1</h5>
 							<p class="card-text">Descripción - Precio 10$</p>
@@ -148,7 +148,7 @@
 			<input name="precio" type="hidden" id="precio" value="20" />
 			<input name="titulo" type="hidden" id="titulo" value="articulo 2" />
 			<input name="cantidad" type="hidden" id="cantidad" value="1" class="pl-2" />
-			<img src="img/art.jpg" class="card-img-top" alt="...">
+			<img src="img/camiseta.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
 							<h5 class="card-title">Producto 2</h5>
 							<p class="card-text">Descripción - Precio 20$</p>
@@ -163,7 +163,7 @@
 			<input name="precio" type="hidden" id="precio" value="30" />
 			<input name="titulo" type="hidden" id="titulo" value="articulo 3" />
 			<input name="cantidad" type="hidden" id="cantidad" value="1" class="pl-2" />
-			<img src="img/art.jpg" class="card-img-top" alt="...">
+			<img src="img/balon1.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
 							<h5 class="card-title">Producto 3</h5>
 							<p class="card-text">Descripción - Precio 30$</p>
